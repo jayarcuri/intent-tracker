@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		187889AD1C31F1A000D18374 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187889AB1C31F1A000D18374 /* LaunchScreen.storyboard */; };
 		187889B81C31F1A000D18374 /* IntentTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187889B71C31F1A000D18374 /* IntentTrackerTests.swift */; };
 		187889C31C31F1A000D18374 /* IntentTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187889C21C31F1A000D18374 /* IntentTrackerUITests.swift */; };
+		18788A111C34366E00D18374 /* FitnessDataGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18788A101C34366E00D18374 /* FitnessDataGraph.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		187889BE1C31F1A000D18374 /* IntentTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntentTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		187889C21C31F1A000D18374 /* IntentTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentTrackerUITests.swift; sourceTree = "<group>"; };
 		187889C41C31F1A000D18374 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18788A101C34366E00D18374 /* FitnessDataGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessDataGraph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				1878899E1C31F1A000D18374 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		1878899E1C31F1A000D18374 /* Products */ = {
 			isa = PBXGroup;
@@ -102,6 +105,7 @@
 				187889A01C31F1A000D18374 /* AppDelegate.swift */,
 				187889A21C31F1A000D18374 /* FirstViewController.swift */,
 				187889A41C31F1A000D18374 /* SecondViewController.swift */,
+				18788A121C3436D400D18374 /* UIView Classes */,
 				187889A61C31F1A000D18374 /* Main.storyboard */,
 				187889A91C31F1A000D18374 /* Assets.xcassets */,
 				187889AB1C31F1A000D18374 /* LaunchScreen.storyboard */,
@@ -126,6 +130,14 @@
 				187889C41C31F1A000D18374 /* Info.plist */,
 			);
 			path = IntentTrackerUITests;
+			sourceTree = "<group>";
+		};
+		18788A121C3436D400D18374 /* UIView Classes */ = {
+			isa = PBXGroup;
+			children = (
+				18788A101C34366E00D18374 /* FitnessDataGraph.swift */,
+			);
+			name = "UIView Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +208,7 @@
 				TargetAttributes = {
 					1878899C1C31F1A000D18374 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = QX9W7U7825;
 					};
 					187889B21C31F1A000D18374 = {
 						CreatedOnToolsVersion = 7.2;
@@ -208,7 +221,7 @@
 				};
 			};
 			buildConfigurationList = 187889981C31F1A000D18374 /* Build configuration list for PBXProject "IntentTracker" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -260,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				187889A51C31F1A000D18374 /* SecondViewController.swift in Sources */,
+				18788A111C34366E00D18374 /* FitnessDataGraph.swift in Sources */,
 				187889A11C31F1A000D18374 /* AppDelegate.swift in Sources */,
 				187889A31C31F1A000D18374 /* FirstViewController.swift in Sources */,
 			);
@@ -401,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = IntentTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = INTW.IntentTracker;
@@ -412,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = IntentTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = INTW.IntentTracker;
@@ -486,6 +502,7 @@
 				187889C91C31F1A000D18374 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		187889CA1C31F1A000D18374 /* Build configuration list for PBXNativeTarget "IntentTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +511,7 @@
 				187889CC1C31F1A000D18374 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		187889CD1C31F1A000D18374 /* Build configuration list for PBXNativeTarget "IntentTrackerUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +520,7 @@
 				187889CF1C31F1A000D18374 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
