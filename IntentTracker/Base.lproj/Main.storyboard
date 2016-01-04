@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qxl-KQ-hjr" customClass="FitnessDataGraph" customModule="IntentTracker" customModuleProvider="target">
-                                <rect key="frame" x="143" y="78" width="315" height="168"/>
+                                <rect key="frame" x="62" y="83" width="476" height="268"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
