@@ -18,13 +18,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qxl-KQ-hjr" customClass="FitnessDataGraph" customModule="IntentTracker" customModuleProvider="target">
-                                <rect key="frame" x="62" y="83" width="476" height="268"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxl-KQ-hjr" customClass="FitnessDataGraph" customModule="IntentTracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="102" width="600" height="268"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qxl-KQ-hjr" secondAttribute="height" multiplier="150:67" id="x84-Fc-n4t"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="graphColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                        <color key="value" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="qxl-KQ-hjr" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="SnH-lR-AVl"/>
+                            <constraint firstItem="qxl-KQ-hjr" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="82" id="pMQ-L5-x2E"/>
                             <constraint firstItem="qxl-KQ-hjr" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="z03-JJ-98S"/>
                         </constraints>
                     </view>
