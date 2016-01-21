@@ -19,14 +19,6 @@ import UIKit
     
     let barToSpaceRatio: CGFloat = 6 // (to one)
     
-/*    init() {
-        super.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }*/
-    
     override func drawRect(rect: CGRect) {
         // Initial Declarations
         let width = rect.width

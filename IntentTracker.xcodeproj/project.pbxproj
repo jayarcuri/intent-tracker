@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		183EC66F1C39C1FF006E4DD6 /* BarChartLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183EC66E1C39C1FF006E4DD6 /* BarChartLabel.swift */; };
+		1831A72E1C50768300F72829 /* BTWatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1831A72D1C50768300F72829 /* BTWatchService.swift */; };
+		1831A7301C507D5400F72829 /* BarChartLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1831A72F1C507D5400F72829 /* BarChartLabel.swift */; };
 		187889A11C31F1A000D18374 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187889A01C31F1A000D18374 /* AppDelegate.swift */; };
 		187889A31C31F1A000D18374 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187889A21C31F1A000D18374 /* FirstViewController.swift */; };
 		187889A51C31F1A000D18374 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187889A41C31F1A000D18374 /* SecondViewController.swift */; };
@@ -37,7 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		183EC66E1C39C1FF006E4DD6 /* BarChartLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BarChartLabel.swift; path = "View Classes/BarChartLabel.swift"; sourceTree = "<group>"; };
+		1831A72D1C50768300F72829 /* BTWatchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTWatchService.swift; sourceTree = "<group>"; };
+		1831A72F1C507D5400F72829 /* BarChartLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BarChartLabel.swift; path = UIView/BarChartLabel.swift; sourceTree = "<group>"; };
 		1878899D1C31F1A000D18374 /* IntentTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntentTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		187889A01C31F1A000D18374 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		187889A21C31F1A000D18374 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				187889A91C31F1A000D18374 /* Assets.xcassets */,
 				187889AB1C31F1A000D18374 /* LaunchScreen.storyboard */,
 				187889AE1C31F1A000D18374 /* Info.plist */,
+				1831A72D1C50768300F72829 /* BTWatchService.swift */,
 			);
 			path = IntentTracker;
 			sourceTree = "<group>";
@@ -138,7 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				18788A101C34366E00D18374 /* FitnessDataGraph.swift */,
-				183EC66E1C39C1FF006E4DD6 /* BarChartLabel.swift */,
+				1831A72F1C507D5400F72829 /* BarChartLabel.swift */,
 			);
 			name = "UIView Classes";
 			sourceTree = "<group>";
@@ -275,11 +278,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				183EC66F1C39C1FF006E4DD6 /* BarChartLabel.swift in Sources */,
 				187889A51C31F1A000D18374 /* SecondViewController.swift in Sources */,
 				18788A111C34366E00D18374 /* FitnessDataGraph.swift in Sources */,
+				1831A7301C507D5400F72829 /* BarChartLabel.swift in Sources */,
 				187889A11C31F1A000D18374 /* AppDelegate.swift in Sources */,
 				187889A31C31F1A000D18374 /* FirstViewController.swift in Sources */,
+				1831A72E1C50768300F72829 /* BTWatchService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
