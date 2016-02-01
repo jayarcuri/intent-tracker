@@ -10,15 +10,15 @@ import Foundation
 import CoreBluetooth
 
 // Maybe put this elsewhere?
-let JoggingMinutesTodayUUID = CBUUID()
-let MeditationMinutesTodayUUID = CBUUID()
+let JoggingMinutesTodayUUID = CBUUID(string: "placeholder")
+let MeditationMinutesTodayUUID = CBUUID(string: "placeholder")
 
 
 class BTWatchService: NSObject, CBPeripheralDelegate {
     var myWatch: CBPeripheral?
     var myWatchBLEUUID: CBUUID?
     
-    init(initForWatch watch: CBPeripheral) {
+    init(initWithWatch watch: CBPeripheral) {
         super.init()
         
         self.myWatch = watch
@@ -63,9 +63,11 @@ class BTWatchService: NSObject, CBPeripheralDelegate {
             return
         }
         
+        
+        
         if let characteristics = service.characteristics {
             for characteristic in characteristics {
-                // TODO: search for our relevant characteristics to read/write
+                // TODO: replace "service.characteristics" with our relevant characteristics to read/write
                 continue
             }
         }
@@ -73,7 +75,9 @@ class BTWatchService: NSObject, CBPeripheralDelegate {
     
     // Mark: - Private
     
-        // TODO: write-to-watch funcs
+        // TODO: read/write-to-watch funcs
+    
+    func 
     
     func sendBTServiceNotificationWithIsBluetoothConnected(isBluetoothConnected: Bool) {
         let connectionDetails = ["isConnected": isBluetoothConnected]
