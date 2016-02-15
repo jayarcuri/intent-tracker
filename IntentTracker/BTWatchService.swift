@@ -8,6 +8,8 @@
 
 import Foundation
 import CoreBluetooth
+import UIKit
+import CoreData
 
 // Maybe put this elsewhere?
 let JoggingMinutesTodayUUID = CBUUID(string: "placeholder")
@@ -15,14 +17,14 @@ let MeditationMinutesTodayUUID = CBUUID(string: "placeholder")
 
 
 class BTWatchService: NSObject, CBPeripheralDelegate {
-    var myWatch: CBPeripheral?
-    var myWatchBLEUUID: CBUUID?
+    var watch: CBPeripheral?
+    var watchBLEUUID: CBUUID?
     
     init(initWithWatch watch: CBPeripheral) {
         super.init()
         
-        self.myWatch = watch
-        self.myWatch?.delegate = self
+        self.watch = watch
+        self.watch?.delegate = self
     }
     
     deinit {
@@ -34,7 +36,7 @@ class BTWatchService: NSObject, CBPeripheralDelegate {
     func peripheral(peripheral: CBPeripheral, didDiscoverServices error: NSError?) {
         // TODO:
         
-        if (peripheral != self.myWatch) {
+        if (peripheral != self.watch) {
             return
         }
         
@@ -48,14 +50,14 @@ class BTWatchService: NSObject, CBPeripheralDelegate {
         }
         
         for service in peripheral.services! {
-            if service.UUID == myWatchBLEUUID! {
+            if service.UUID == watchBLEUUID! {
                // discover, write characteristics if necessary.
             }
         }
     }
     
     func peripheral(peripheral: CBPeripheral, didDiscoverCharacteristicsForService service: CBService, error: NSError?) {
-        if (peripheral != self.myWatch) {
+        if (peripheral != self.watch) {
             return
         }
         
@@ -75,9 +77,30 @@ class BTWatchService: NSObject, CBPeripheralDelegate {
     
     // Mark: - Private
     
-        // TODO: read/write-to-watch funcs
+    // TODO: read/write-to-watch funcs
     
-    func 
+    // Called when app requests a watch sync
+    func getWatchData() -> Bool {
+        let watchDate = self.watch?.valueForKey("date") as? NSDate
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        
+        let fetchRequest = NSFetchRequest(entityName: "Day")
+        fetchRequest.resultType = NSDate
+        // Gotta write a thing that grabs the current day if it exists and writes all the data it needs to to that entry.
+        
+        do {
+            let results =
+            try managedContext.executeFetchRequest(watchesRequest)
+            watches = results as! [NSManagedObject]
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+
+        
+        return false
+    }
     
     func sendBTServiceNotificationWithIsBluetoothConnected(isBluetoothConnected: Bool) {
         let connectionDetails = ["isConnected": isBluetoothConnected]
