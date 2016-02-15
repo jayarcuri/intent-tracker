@@ -87,13 +87,14 @@ class BTWatchService: NSObject, CBPeripheralDelegate {
         let managedContext = appDelegate.managedObjectContext
         
         let fetchRequest = NSFetchRequest(entityName: "Day")
-        fetchRequest.resultType = NSDate
+        // UH OH
+        fetchRequest.resultType = NSFetchRequestResultType.ManagedObjectResultType
         // Gotta write a thing that grabs the current day if it exists and writes all the data it needs to to that entry.
         
         do {
             let results =
-            try managedContext.executeFetchRequest(watchesRequest)
-            watches = results as! [NSManagedObject]
+            try managedContext.executeFetchRequest(fetchRequest)
+            var watches = results as! [NSManagedObject]
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
         }
